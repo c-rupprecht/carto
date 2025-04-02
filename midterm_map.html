@@ -1,0 +1,135 @@
+<html>
+<head>
+
+<title>COLORADO WILD FIRES 2010-2015</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+
+
+<style>
+	body { margin:0; padding:0; }
+	#mapdiv { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+    
+<link href = 'Mapbox_example10_styles.css' rel = 'stylesheet' />  
+
+</head>
+
+<body>
+  
+    <div id="mapdiv"></div>
+   </div>
+
+<div id="mapdiv"></div>
+    
+    <div class='map-overlay'> 
+    <div class='map-overlay-inner'>
+        <h2> Denver Pedestrian & Bicycle Counts</h2>
+        <p class="credit"> This map is created for <a href="https://fuzhen-yin.github.io/uccs_cartography/index.html"> GES Cartography Lab </a> by using the <a href="https://data.drcog.org/dataset/bicycle-and-pedestrian-counts"> Pedestrian & Bicycle Count Data</a> and <a href='https://opendata-geospatialdenver.hub.arcgis.com/datasets/f651766e877249108933f9f9f3196b69_244/explore?location=39.737255%2C-104.887634%2C9.99'>Existing Bike Facilities Data</a>  </p>
+        
+    </div>
+</div>
+
+
+<script>
+var mymap = L.map('mapdiv').setView([39.0248, -105.3917], 8);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+	}).addTo(mymap);
+    
+var marker = L.marker([40.048, -105.39]).addTo(mymap);
+    marker.bindPopup("Fourmile Canyon Fire   <br> 2010 <br> 6200 acres <br> <a href='</a>")
+var marker = L.marker([37.31, -107.18]).addTo(mymap);
+    marker.bindPopup("Bear Springs Complex Fire  <br> 2011 <br> 44662 acres <br> <a href='</a>")
+var marker = L.marker([40.68, -105.30]).addTo(mymap);
+    marker.bindPopup("Hewlett Gulch Fire  <br> 2012 <br> 7685 acres <br> <a href=</a>")
+var marker = L.marker([39.44, -103.33]).addTo(mymap);
+    marker.bindPopup("Last Chance Fire  <br> 2012 <br> 45000 acres <br> <a href='</a>")
+var marker = L.marker([39.30, -105.07]).addTo(mymap);
+    marker.bindPopup("Lower North Fork Fire  <br> 2012 <br> 4140 acres <br> <a href='</a>")
+var marker = L.marker([40.58, -105.40]).addTo(mymap);
+    marker.bindPopup("High Park Fire  <br> 2012 <br> 87284 acres <br> <a href='</a>")
+var marker = L.marker([38.89, -104.87]).addTo(mymap);
+    marker.bindPopup("Waldo Canyon Fire  <br> 2012 <br> 18247 acres <br> <a href='</a>")
+var marker = L.marker([37.46, -107.25]).addTo(mymap);
+    marker.bindPopup("Little Sand Fire  <br> 2012 <br> 11617 acres <br> <a href='</a>")
+var marker = L.marker([39.01, -104.75]).addTo(mymap);
+    marker.bindPopup("Black Forest Fire  <br> 2013 <br> 14280 acres <br> <a href='</a>")
+var marker = L.marker([37.37, -107.00]).addTo(mymap);
+    marker.bindPopup("West Fork Complex Fire  <br> 2014 <br> 109049 acres <br> <a href='</a>")
+    var circle = L.circle([40.048, -105.39], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.3,
+    radius: 2500
+}).addTo(mymap);
+    var circle = L.circle([37.31, -107.18], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 18000
+}).addTo(mymap);
+    var circle = L.circle([40.68, -105.30], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 3100
+}).addTo(mymap);
+    var circle = L.circle([39.44, -103.33], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.3,
+    radius: 18200
+}).addTo(mymap);
+    var circle = L.circle([39.30, -105.07], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.3,
+    radius: 1600
+}).addTo(mymap);
+    
+var circle = L.circle([40.58, -105.40], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 35300
+}).addTo(mymap);
+    var circle = L.circle([38.89, -104.87], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.3,
+    radius: 5000
+}).addTo(mymap);
+    var circle = L.circle([37.46, -107.25], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 47000
+}).addTo(mymap);
+    var circle = L.circle([39.01, -104.75], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 5700
+}).addTo(mymap);
+    var circle = L.circle([37.37, -107.00], {
+    color: 'green',
+    fillColor: 'rgb179',
+    fillOpacity: 0.3,
+    radius: 44100
+}).addTo(mymap);
+ 
+    
+   
+</script>
+
+</body>
+</html>
